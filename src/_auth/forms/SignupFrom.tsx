@@ -18,6 +18,7 @@ import { Link, useNavigate } from "react-router-dom"
 
 import { useCreateUserAccount, useSignInAccount } from "@/lib/react-query/queriesAndMutations"
 import { useUserContext } from "@/context/AuthContext"
+import Loader from "@/components/shared/Loader"
 
 
 
@@ -124,7 +125,8 @@ const SignupForm = () => {
         <Button type="submit" className="shad-button_primary">
         {isCreatingUser ? (
           <div className="flex-center gap-2">
-            Loading...
+            {/* Loading... */}
+            <Loader/>
           </div>
         ):"Sign up"}
         </Button>
